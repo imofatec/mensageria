@@ -46,6 +46,7 @@ public class SendUserEmailConfirmationConfirmationService implements
       helper.setText(htmlContent, true);
       this.mailSender.send(message);
 
+      log.info("email enviado com sucesso");
     } catch (Exception e) {
       log.error(e.getMessage());
     }

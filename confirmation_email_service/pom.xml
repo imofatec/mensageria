@@ -28,6 +28,7 @@
     </scm>
     <properties>
         <java.version>21</java.version>
+        <start-class>com.imo.confirmation_email_service.ConfirmationEmailServiceApplication</start-class>
     </properties>
     <dependencies>
         <dependency>

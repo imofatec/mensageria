@@ -51,7 +51,9 @@ public class UserEmailConfirmationListener implements
       newOutboxes.forEach(outbox -> {
         this.rabbitTemplate.convertAndSend(
             envs.getExchangeName(), envs.getRoutingKey(), outbox.getPayload());
+        log.info("mensagem enviada para o message broker");
         this.outboxRepository.deleteById(outbox.getId());
+        log.info("outbox apagada do repositorio");
       });
     } catch (Exception e) {
       log.error(e.getMessage());

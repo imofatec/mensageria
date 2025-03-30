@@ -1,0 +1,10 @@
+services:
+  producer-service:
+    image: producer-service:latest
+    ports:
+      - "8081:8081"
+
+  confirmation-email-service:
+    image: confirmation-email-service:latest
+    ports:
+      - "8082:8082"
